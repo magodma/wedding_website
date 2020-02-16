@@ -30,7 +30,7 @@
                 href + '">Google Calendar</a>';
         },
 
-        yahoo: function(event) {
+        /* yahoo: function(event) {
             var eventDuration = event.end ?
                 ((event.end.getTime() - event.start.getTime())/ MS_IN_MINUTES) :
                 event.duration;
@@ -62,7 +62,7 @@
             return '<a class="icon-yahoo" target="_blank" href="' +
                 href + '">Yahoo! Calendar</a>';
         },
-
+        */
         ics: function(event, eClass, calendarName) {
             var startTime = formatTime(event.start);
             var endTime = calculateEndTime(event);
@@ -84,10 +84,10 @@
             return '<a class="' + eClass + '" target="_blank" href="' +
                 href + '">' + calendarName + ' Calendar</a>';
         },
-
+        /*
         ical: function(event) {
             return this.ics(event, 'icon-ical', 'iCal');
-        },
+        },*/
 
         outlook: function(event) {
             return this.ics(event, 'icon-outlook', 'Outlook');
@@ -97,9 +97,9 @@
     var generateCalendars = function(event) {
         return {
             google: calendarGenerators.google(event),
-            yahoo: calendarGenerators.yahoo(event),
-            ical: calendarGenerators.ical(event),
-            outlook: calendarGenerators.outlook(event)
+            /* yahoo: calendarGenerators.yahoo(event),
+            ical: calendarGenerators.ical(event),*/
+             outlook: calendarGenerators.outlook(event)
         };
     };
 
@@ -129,7 +129,7 @@
         var result = document.createElement('div');
 
         result.innerHTML = '<label id="add-to-calendar-label" for="checkbox-for-' +
-            calendarId + '" class="btn btn-fill btn-small"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Add to Calendar</label>';
+            calendarId + '" class="btn btn-fill btn-small"><i class="fa fa-calendar"></i>&nbsp;&nbsp; Añadir a calendario</label>';
         result.innerHTML += '<input name="add-to-calendar-checkbox" class="add-to-calendar-checkbox" id="checkbox-for-' + calendarId + '" type="checkbox">';
 
         Object.keys(calendars).forEach(function(services) {

@@ -16,7 +16,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Ana & Manuel">
     <meta property="og:description" content="Nos gustaría invitarte a nuestro gran día.">
-    <!-- <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg"> -->
+    <meta property="og:image" content="/img/hero-min.jpg">
     <meta property="og:type" content="website">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -54,7 +54,7 @@
                         </ul>
                         <ul class="member-actions">
                             <li><a href="#map" class="login">Lugares</a></li>
-                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                            <li><a href="#events" class="btn-white btn-small">confirmación</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -67,9 +67,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="hero-content text-center">
+                <div class="hero-content text-center hero-text">
                     <!--<h1>Ana y Manuel</h1>-->
-                    <img src="img/logo">
+                    <!-- <img src="img/hero.jpg"> -->
+                    <h3>¡Nos casamos!</h3>
+                <p>La fecha es el 10 de Octubre de 2020 y nos gustaría que formaseis parte de un gran día.</p>
                     <!--<p class="intro">Ram & Antara are getting hitched!</p>-->
                     <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
                 </div>
@@ -77,25 +79,25 @@
         </div>
         <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
-            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+            <div class="col-sm-4 hidden-xs text-center"><a href="#events"
+                                                           class="btn btn-accent btn-large rsvp-btn">confirmación</a></div>
             <div class="col-sm-4 hidden-xs"></div>
         </div>
     </div>
     <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
 </section>
 
-<section id="invitation" class="section-padding">
+<!-- <section id="invitation" class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3>¡Nos casamos!</h3>
                 <p>La fecha es el 10 de Octubre de 2020 y nos gustaría que formaseis parte de un gran día.</p>
-                <div class="share-bar"></div>
+                -- <div class="share-bar"></div> --
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section id="intro">
     <div class="container">
@@ -132,12 +134,28 @@
                 <div class="wp3">
                     <p><strong>10 de Octubre</strong></p>
 
-                    <h5>Ceremonia <span class="time">12:00</span></h5>
-                    <p>Iglesía de San Sebastian Almeria</p>
+                    <h3>Ceremonia <span class="time">12:00</span></h3>
+                    <p>Parroquia San Sebastian</p>
+                    <h6>Ubicación:</h6>
+                    <h6>Calle Murcia, 2, 04004 Almería</h6>
+                    <div class="row section-padding">
+                            <div class="col-md-4 col-md-offset-4 text-center">
+                    
+                        <a target="_blank" href="https://www.google.com/maps/place/Parroquia+de+San+Sebastian/@36.842197,-2.462414,20z/data=!4m12!1m6!3m5!1s0x0:0xd8a879af5a8119be!2sParroquia+de+San+Sebastian!8m2!3d36.8421276!4d-2.4623751!3m4!1s0x0:0xd8a879af5a8119be!8m2!3d36.8421276!4d-2.4623751?hl=en-US" class="btn btn-accent btn-large rsvp-btn"
+                            class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Mapa</a>
+                    </div></div>
+                    
                 </div>
                 <div class="wp5">
                     <h5>Celebración <span class="time">13:30   </span></h5>
                     <p>Villaloreto, Santa Fe de Mondujar.</p>
+                </div>
+                <div class="row section-padding">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Confirmación boda
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
@@ -146,21 +164,166 @@
 
                     <h5>Paella <span class="time">14:00</span></h5>
                     <p>Paella.</p>
+                </div>
+                <div class="row section-padding">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal-paella">
+                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Confirmación paella
+                        </a>
+                    </div>
                 </div>                
             </div>
         </div>
-        <!--<div class="row section-padding">
-            <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
-                </a>
-            </div>
-        </div>-->
+        
         <!--<div class="row">
             <div class="col-xs-12 section-border section-padding">
             </div>
         </div>-->
     </div>
+
+    <!-- Confirmacion boda-->
+    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div> 
+            <div class="modal-content">
+                <div class="modal-body">   
+                    <div class="container">
+                        <div class="row">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                                </button>
+                            <div class="col-md-6 col-md-offset-3">
+                                <h3>¿A qué estás esperando?</h3>
+                                <p>Le agreradeceriamos mucho que puediera confirmar su asistencia antes del 15 de septiembre de 2020</p>
+                                <form id="rsvp-form" class="rsvp-form"
+                                    action=""
+                                    method="POST">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                                    placeholder="Su email"
+                                                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                                placeholder="Su nombre"
+                                                                                required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                                max="5"
+                                                                                placeholder="Número de acompañante"
+                                                                                required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-users"></i><input type="number" name="childs" class="" min="0"
+                                                                                max="5"
+                                                                                placeholder="Número de niños"
+                                                                                required>
+                                            </div>
+                                        </div>
+                                    </div>                        
+                                    <div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-input-group">
+                                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                                class="" min="0"
+                                                                                placeholder="Codigo de invitación"
+                                                                                required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12" id="alert-wrapper"></div>
+                                    </div>
+                                    <button class="btn-fill rsvp-btn">
+                                        Si,
+                                        Ese soy yo!
+                                    </button>
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmacion boda-->
+    <div id="dc-modal-paella" class="modal fade" tabindex="-1" role="dialog">
+            <div> 
+                <div class="modal-content">
+                    <div class="modal-body">   
+                        <div class="container">
+                            <div class="row">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                                    </button>
+                                <div class="col-md-6 col-md-offset-3">
+                                    <h3>¿A qué estás esperando?</h3>
+                                    <p>Le agreradeceriamos mucho que puediera confirmar su asistencia antes del 15 de septiembre de 2020</p>
+                                    <form id="rsvp-form-paella" class="rsvp-form"
+                                        action=""
+                                        method="POST">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="form-input-group">
+                                                    <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                                        placeholder="Su email"
+                                                                                        required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="form-input-group">
+                                                    <i class="fa fa-user"></i><input name="name" class=""
+                                                                                    placeholder="Su nombre"
+                                                                                    required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="form-input-group">
+                                                    <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                                    max="5"
+                                                                                    placeholder="Número de personas"
+                                                                                    required>
+                                                </div>
+                                            </div>                                            
+                                        </div>                        
+                                        <div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="form-input-group">
+                                                    <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                                    class="" min="0"
+                                                                                    placeholder="Codigo de invitación"
+                                                                                    required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-12" id="alert-wrapper"></div>
+                                        </div>
+                                        <button class="btn-fill rsvp-btn">
+                                            Si,
+                                            Ese soy yo!
+                                        </button>
+                                    </form> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+        </div>
 
     <!--<div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -213,6 +376,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3>¡Instagram!</h3>
+                Wedshots
                 <p>Ayudanos a capturar el momento, etiqueta tus fotos con elhashtag
                     <a href="https://instagram.com/explore/tags/AnaYManuel/" target="_blank">#AnaYManuel</a>
                 </p>
@@ -321,7 +485,7 @@
     </div>
 </section>
 
-<section id="map" class="section-padding">
+<!-- <section id="map" class="section-padding">
     <div class="text-center">
         <h3>¿Cómo llego hasta ahí?</h3>
         <p>¡Es más facil de lo que piensas!</p>
@@ -365,7 +529,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="rsvp text-center" id="rsvp">
 
@@ -414,10 +578,31 @@
                             <div class="form-input-group">
                                 <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
                                                                   max="5"
-                                                                  placeholder="Acompañante o hijos"
+                                                                  placeholder="Número de acompañante"
                                                                   required>
                             </div>
                         </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="childs" class="" min="0"
+                                                                  max="5"
+                                                                  placeholder="Número de niños"
+                                                                  required>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="sunday" class="" min="0"
+                                                                  max="5"
+                                                                  placeholder="platos domingo"
+                                                                  required>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
@@ -427,6 +612,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
@@ -461,7 +647,7 @@
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm6ZltHM2DQfF2Tc7pCdXYWB6izqev23s&callback=initMap"></script>
 <!-- Google Analytics -->
 <script>
     (function (i, s, o, g, r, a, m) {
