@@ -265,7 +265,8 @@ function initBBSRMap() {
 
     var marker = new google.maps.Marker({
         position: la_fiesta,
-        map: map
+        map: map,
+        
     });
 }
 
