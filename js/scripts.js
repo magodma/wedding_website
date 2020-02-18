@@ -5,48 +5,48 @@ $(document).ready(function () {
     $('.wp1').waypoint(function () {
         $('.wp1').addClass('animated fadeInLeft');
     }, {
-        offset: '75%'
-    });
+            offset: '75%'
+        });
     $('.wp2').waypoint(function () {
         $('.wp2').addClass('animated fadeInRight');
     }, {
-        offset: '75%'
-    });
+            offset: '75%'
+        });
     $('.wp3').waypoint(function () {
         $('.wp3').addClass('animated fadeInLeft');
     }, {
-        offset: '75%'
-    });
+            offset: '75%'
+        });
     $('.wp4').waypoint(function () {
         $('.wp4').addClass('animated fadeInRight');
     }, {
-        offset: '75%'
-    });
+            offset: '75%'
+        });
     $('.wp5').waypoint(function () {
         $('.wp5').addClass('animated fadeInLeft');
     }, {
-        offset: '75%'
-    });
+            offset: '75%'
+        });
     $('.wp6').waypoint(function () {
         $('.wp6').addClass('animated fadeInRight');
     }, {
-        offset: '75%'
-    });
+            offset: '75%'
+        });
     $('.wp7').waypoint(function () {
         $('.wp7').addClass('animated fadeInUp');
     }, {
-        offset: '75%'
-    });
+            offset: '75%'
+        });
     $('.wp8').waypoint(function () {
         $('.wp8').addClass('animated fadeInLeft');
     }, {
-        offset: '75%'
-    });
+            offset: '75%'
+        });
     $('.wp9').waypoint(function () {
         $('.wp9').addClass('animated fadeInRight');
     }, {
-        offset: '75%'
-    });
+            offset: '75%'
+        });
 
     /***************** Initiate Flexslider ******************/
     $('.flexslider').flexslider({
@@ -220,17 +220,47 @@ $(document).ready(function () {
         } else {
             $.post('https://script.google.com/macros/s/AKfycbwSIZOdtgurm7URobgS8Jxd_Vd4lst-joBIPolbzDivXUEeUhI/exec', data)
                 .done(function (data) {
-                    console.log(data);
+                    // console.log(data);
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
                     } else {
                         $('#alert-wrapper').html('');
-                        $('#rsvp-modal').modal('show');
+                        $('#dc-modal').modal('hide');
+                        $('#rsvp-form').modal('hide');
+                    }
+                })
+                .fail(function (data) {
+
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>¡Lo sentimos!</strong> Hay un error con el servidor. '));
+                });
+        }
+    });
+
+    /********************** PAELLA **********************/
+    $('#rsvp-paella-form').on('submit', function (e) {
+
+        e.preventDefault();
+        var data = $(this).serialize();
+
+        $('#alert-wrapper-paella').html(alert_markup('info', '<strong>¡Un momento!</strong> Estamos guardando los detalles.'));
+        if (MD5($('#invite_code_paella').val()) !== '114382304d7e801eb4def196d8d64eb3'
+            && MD5($('#invite_code_paella').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
+            console.log($('#invite_code_paella').val());
+            $('#alert-wrapper-paella').html(alert_markup('danger', '<strong>¡Lo sentimos!</strong> Su código de invitación es incorrecto.'));
+        } else {
+            $.post('https://script.google.com/macros/s/AKfycbybDaTan1Bc-0FKEOb3FnaTVuBuFeLnXzrSYFEmIO-9FKWRuy8/exec', data)
+                .done(function (data) {
+                    if (data.result === "error") {
+                        $('#alert-wrapper-paella').html(alert_markup('danger', data.message));
+                    } else {
+                        $('#alert-wrapper-paella').html('');
+                        $('#dc-modal-paella').modal('hide');
+                        $('#rsvp-form-paella').modal('hide');
                     }
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>¡Lo sentimos!</strong> Hay un error con el servidor. '));
+                    $('#alert-wrapper-paella').html(alert_markup('danger', '<strong>¡Lo sentimos!</strong> Hay un error con el servidor. '));
                 });
         }
     });
@@ -241,12 +271,12 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = {lat: 36.842188, lng: -2.462438};
+    var location = { lat: 36.842188, lng: -2.462438 };
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
         scrollwheel: false
-        
+
     });
 
     var marker = new google.maps.Marker({
@@ -256,7 +286,7 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var la_fiesta = { lat: 20.305826, lng: 85.85480189999998 };
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,
@@ -266,7 +296,7 @@ function initBBSRMap() {
     var marker = new google.maps.Marker({
         position: la_fiesta,
         map: map,
-        
+
     });
 }
 
