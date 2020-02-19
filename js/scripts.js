@@ -1,5 +1,44 @@
 $(document).ready(function () {
 
+
+    /********************** Countdown *******************************/
+    var date = countDownDate()
+    
+    
+    function countDownDate(){
+    var countDownDate = new Date("Oct 10, 2020 12:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      var date = "<h3> Quedan.. "+days + "d " + hours + "h " + minutes + "m " + seconds + "s </h3>";
+      $('#countdown').html(date);
+      
+        
+      // Display the result in the element with id="demo"
+
+    
+      // If the count down is finished, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        $('#countdown').html('Llego el gran día');
+        
+      }
+    }, 1000);
+ }
+
     /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {
@@ -150,16 +189,14 @@ $(document).ready(function () {
             'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=manugodoym&amp;hashtags=anaymanuel&amp;count=horizontal"' +
             'style="width   :105px; height:21px;">' +
             '</iframe>' +
-
-            '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=101094500229731&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>' +
-
-            '<div class="g-plusone" data-size="medium"></div>';
-
-        // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
+            '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=101094500229731&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>'
 
         share_bar[i].innerHTML = html;
         share_bar[i].style.display = 'inline-block';
     }
+
+    
+    
 
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();

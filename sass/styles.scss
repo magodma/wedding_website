@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap);
 // Imports
 //@import "compass";
 @import "partials/typography";
@@ -37,7 +38,8 @@ a:hover, a:focus {
   text-decoration: none;
 }
 body {
-  font-family: $sans-serif;
+font-family: 'Kaushan Script', cursive;
+  // font-family: $sans-serif;
   font-weight: $light;
   color: $txt-primary;
   -webkit-text-size-adjust: 100%;
@@ -58,6 +60,9 @@ section .header {
 }
 .section-padding {
   padding: $section-padding;
+}
+.section-padding-0 {
+  padding: $section-padding-0;
 }
 .section-border {
   border-bottom: 1px solid $keyline-color;
@@ -790,6 +795,22 @@ Google map
 .pointer-events-auto {
   pointer-events: auto;
 }
+.text-p-size {
+  font-size: 14px;
+}
+
+.map-btn {
+  padding: 12px 0;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 11px;
+}
+
+.map-icon {
+  width:50px; 
+  padding-top:18px;
+  padding-right: 20px
+}
 
 /* ==========================================================================
 RSVP form
@@ -813,6 +834,7 @@ RSVP form
       border: solid 1px $keyline-color;
       text-align: left;
       position: relative;
+      font-size:15px;
 
       i {
         color: $accent-color;

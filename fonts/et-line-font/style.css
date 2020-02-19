@@ -326,9 +326,6 @@ you can use the generic selector below, but it's slower:
 .icon-twitter:before {
 	content: "\e05e";
 }
-.icon-googleplus:before {
-	content: "\e05f";
-}
 .icon-rss:before {
 	content: "\e060";
 }
