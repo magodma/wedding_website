@@ -292,8 +292,12 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    .btn-background-white {
+        background-color: #c0c7d0;
+    }
     .hero .hero-content {
-        padding-top: 110%;
+        padding-top: 80%;
     }
     
     .hero .hero-content img {
@@ -357,7 +361,11 @@
 
 @media screen and (max-width: 320px) {
     .hero .hero-content {
-        padding-top: 130%;
+        padding-top: 80%;
+    }
+
+    .btn-background-white {
+        background-color: #c0c7d0;
     }
 
     .rsvp {

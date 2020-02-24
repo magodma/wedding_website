@@ -23,7 +23,7 @@ $(document).ready(function () {
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-      var date = "<h3> Quedan.. "+days + "d " + hours + "h " + minutes + "m " + seconds + "s </h3>";
+      var date = "<h3> Quedan: "+days + "d " + hours + "h " + minutes + "m " + seconds + "s </h3>";
       $('#countdown').html(date);
       
         
