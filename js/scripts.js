@@ -3,89 +3,89 @@ $(document).ready(function () {
 
     /********************** Countdown *******************************/
     var date = countDownDate()
-    
-    
-    function countDownDate(){
-    var countDownDate = new Date("Oct 10, 2020 12:00:00").getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-    
-      // Get today's date and time
-      var now = new Date().getTime();
-    
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
-    
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-      var date = "<h3> Quedan: "+days + "d " + hours + "h " + minutes + "m " + seconds + "s </h3>";
-      $('#countdown').html(date);
-      
-        
-      // Display the result in the element with id="demo"
 
-    
-      // If the count down is finished, write some text 
-      if (distance < 0) {
-        clearInterval(x);
-        $('#countdown').html('Llego el gran día');
-        
-      }
-    }, 1000);
- }
+    function countDownDate() {
+        var countDownDate = new Date("Oct 10, 2020 12:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            var date = "<h3> Quedan: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s </h3>";
+            $('#countdown').html(date);
+
+
+            // Display the result in the element with id="demo"
+
+
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                $('#countdown').html('Llego el gran día');
+
+            }
+        }, 1000);
+    }
 
     /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {
         $('.wp1').addClass('animated fadeInLeft');
     }, {
-            offset: '75%'
-        });
+        offset: '75%'
+    });
     $('.wp2').waypoint(function () {
         $('.wp2').addClass('animated fadeInRight');
     }, {
-            offset: '75%'
-        });
+        offset: '75%'
+    });
     $('.wp3').waypoint(function () {
         $('.wp3').addClass('animated fadeInLeft');
     }, {
-            offset: '75%'
-        });
+        offset: '75%'
+    });
     $('.wp4').waypoint(function () {
         $('.wp4').addClass('animated fadeInRight');
     }, {
-            offset: '75%'
-        });
+        offset: '75%'
+    });
     $('.wp5').waypoint(function () {
         $('.wp5').addClass('animated fadeInLeft');
     }, {
-            offset: '75%'
-        });
+        offset: '75%'
+    });
     $('.wp6').waypoint(function () {
         $('.wp6').addClass('animated fadeInRight');
     }, {
-            offset: '75%'
-        });
+        offset: '75%'
+    });
     $('.wp7').waypoint(function () {
         $('.wp7').addClass('animated fadeInUp');
     }, {
-            offset: '75%'
-        });
+        offset: '75%'
+    });
     $('.wp8').waypoint(function () {
         $('.wp8').addClass('animated fadeInLeft');
     }, {
-            offset: '75%'
-        });
+        offset: '75%'
+    });
     $('.wp9').waypoint(function () {
         $('.wp9').addClass('animated fadeInRight');
     }, {
-            offset: '75%'
-        });
+        offset: '75%'
+    });
 
     /***************** Initiate Flexslider ******************/
     $('.flexslider').flexslider({
@@ -195,8 +195,8 @@ $(document).ready(function () {
         share_bar[i].style.display = 'inline-block';
     }
 
-    
-    
+
+
 
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();

@@ -325,12 +325,14 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/hero.jpg') center center;
+  background: url('../img/hero.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+
+
 
   /*.rsvp-btn {
     position: absolute;
@@ -963,6 +965,16 @@ Google map
   width: 50px;
   padding-top: 18px;
   padding-right: 20px
+}
+
+.map-icon-social {
+  width: 65px !important;
+  padding-top: 0px;
+  padding-right: 20px
+}
+
+.padding-top-social {
+  padding-top: 3%;
 }
 
 /* ==========================================================================
