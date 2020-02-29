@@ -1,4 +1,22 @@
+@media screen and (max-width: 1600px) {
+    .hero {
+        background: url('../img/herogrande.png') no-repeat center center;
+    }
+    header {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .intro-content {
+        display: inline-block;
+        width: 70%;
+    }
+
+}
 @media screen and (max-width: 1200px) {
+    .hero {
+        background: url('../img/herogrande.png') no-repeat center center;
+    }
     header {
         width: 90%;
         margin: 0 auto;
@@ -12,6 +30,9 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .hero {
+        background: url('../img/herogrande.png') no-repeat center center;
+    }
     .hero .hero-content {
         padding-top: 50%;
     }
@@ -19,6 +40,9 @@
 
 /* Responsive nav kicks in */
 @media screen and (max-width: 991px) {
+    .hero {
+        background: url('../img/herogrande.png') no-repeat center center;
+    }
     header {
         width: 90%;
         padding-left: 25px;
@@ -253,6 +277,9 @@
 }
 
 @media screen and (max-width: 640px) {
+    .hero {
+        background: url('../img/hero.jpg') no-repeat center center;
+    }
     .hero .hero-content {
         padding-top: 100%;
     }
@@ -292,6 +319,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .hero {
+        background: url('../img/hero.jpg') no-repeat center center;
+    }
 
     .btn-background-white {
         background-color: #d0ddef;
@@ -360,6 +390,10 @@
 }
 
 @media screen and (max-width: 320px) {
+
+    .hero {
+        background: url('../img/hero.jpg') no-repeat center center;
+    }
     .hero .hero-content {
         padding-top: 80%;
     }
