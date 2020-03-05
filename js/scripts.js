@@ -184,7 +184,7 @@ $(document).ready(function () {
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(po, s);
 
-    for (var i = 0; i < share_bar.length; i++) {
+    /* for (var i = 0; i < share_bar.length; i++) {
         var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
             'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=manugodoym&amp;hashtags=anaymanuel&amp;count=horizontal"' +
             'style="width   :105px; height:21px;">' +
@@ -193,13 +193,13 @@ $(document).ready(function () {
 
         share_bar[i].innerHTML = html;
         share_bar[i].style.display = 'inline-block';
-    }
+    } */
 
 
 
 
     /********************** Embed youtube video *********************/
-    $('.player').YTPlayer();
+    // $('.player').YTPlayer();
 
 
     /********************** Toggle Map Content **********************/
