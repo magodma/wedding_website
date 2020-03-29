@@ -12,6 +12,10 @@
         width: 70%;
     }
 
+    .love{
+        height: 530px;
+    }
+
 }
 @media screen and (max-width: 1200px) {
     .hero {
@@ -26,6 +30,9 @@
         display: inline-block;
         width: 70%;
     }
+    .love{
+        height: 530px;
+    }
 
 }
 
@@ -35,6 +42,9 @@
     }
     .hero .hero-content {
         padding-top: 50%;
+    }
+    .love{
+        height: 530px;
     }
 }
 
@@ -64,6 +74,10 @@
         opacity: 0;
         -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
         transition: opacity 0.5s, visibility 0s 0.5s;
+    }
+
+    .love{
+        height: 530px;
     }
 
     ul.member-actions {
