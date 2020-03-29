@@ -285,7 +285,8 @@ $(document).ready(function () {
             console.log($('#invite_code_paella').val());
             $('#alert-wrapper-paella').html(alert_markup('danger', '<strong>¡Lo sentimos!</strong> Su código de invitación es incorrecto.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbybDaTan1Bc-0FKEOb3FnaTVuBuFeLnXzrSYFEmIO-9FKWRuy8/exec', data)
+            // $.post('https://script.google.com/macros/s/AKfycbybDaTan1Bc-0FKEOb3FnaTVuBuFeLnXzrSYFEmIO-9FKWRuy8/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbwSIZOdtgurm7URobgS8Jxd_Vd4lst-joBIPolbzDivXUEeUhI/exec', data)
                 .done(function (data) {
                     if (data.result === "error") {
                         $('#alert-wrapper-paella').html(alert_markup('danger', data.message));
@@ -293,6 +294,36 @@ $(document).ready(function () {
                         $('#alert-wrapper-paella').html('');
                         $('#dc-modal-paella').modal('hide');
                         $('#rsvp-form-paella').modal('hide');
+                    }
+                })
+                .fail(function (data) {
+                    console.log(data);
+                    $('#alert-wrapper-paella').html(alert_markup('danger', '<strong>¡Lo sentimos!</strong> Hay un error con el servidor. '));
+                });
+        }
+    });
+
+    /********************** BUS **********************/
+    $('#rsvp-bus-form').on('submit', function (e) {
+
+        e.preventDefault();
+        var data = $(this).serialize();
+
+        $('#alert-wrapper-bus').html(alert_markup('info', '<strong>¡Un momento!</strong> Estamos guardando los detalles.'));
+        if (MD5($('#invite_code_bus').val()) !== '114382304d7e801eb4def196d8d64eb3'
+            && MD5($('#invite_code_bus').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
+            console.log($('#invite_code_bus').val());
+            $('#alert-wrapper-bus').html(alert_markup('danger', '<strong>¡Lo sentimos!</strong> Su código de invitación es incorrecto.'));
+        } else {
+            // $.post('https://script.google.com/macros/s/AKfycbybDaTan1Bc-0FKEOb3FnaTVuBuFeLnXzrSYFEmIO-9FKWRuy8/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbwSIZOdtgurm7URobgS8Jxd_Vd4lst-joBIPolbzDivXUEeUhI/exec', data)
+                .done(function (data) {
+                    if (data.result === "error") {
+                        $('#alert-wrapper-bus').html(alert_markup('danger', data.message));
+                    } else {
+                        $('#alert-wrapper-bus').html('');
+                        $('#dc-modal-bus').modal('hide');
+                        $('#rsvp-form-bus').modal('hide');
                     }
                 })
                 .fail(function (data) {

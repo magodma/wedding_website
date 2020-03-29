@@ -990,10 +990,16 @@ RSVP form
 
   .rsvp-form {
     .rsvp-btn {
-      padding: 15px 0;
+      padding: 10px 0;
       border-radius: 3px;
       width: 100%;
       font-size: 13px;
+    }
+
+    .rsvp-btn-close {
+      margin-top: 5px;
+      background: #ec6439;
+      border-color: #ec6439;
     }
 
     .form-input-group {
