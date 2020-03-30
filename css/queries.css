@@ -298,6 +298,10 @@
         padding-top: 100%;
     }
 
+    .love{
+        height: 530px;
+    }
+
     #eng-pics .img-wrap i {
         font-size: 25px;
         position: absolute;
@@ -335,6 +339,10 @@
 @media screen and (max-width: 480px) {
     .hero {
         background: url('../img/hero.jpg') no-repeat center center;
+    }
+
+    .love{
+        height: 530px;
     }
 
     .btn-background-white {
@@ -410,6 +418,10 @@
     }
     .hero .hero-content {
         padding-top: 80%;
+    }
+
+    .love{
+        height: 445px;
     }
 
     .btn-background-white {
