@@ -332,13 +332,6 @@ Hero
   background-size: cover;
   position: relative;
 
-
-
-  /*.rsvp-btn {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-  }*/
   .down-arrow a {
     color: $txt-light;
   }
@@ -972,15 +965,15 @@ Google map
   padding-right: 20px
 }
 
-.map-icon-social {
-  width: 65px !important;
-  padding-top: 0px;
-  padding-right: 20px
-}
-
 .map-icon-parking {
   width: 50px;
   padding-top: 5px;
+  padding-right: 20px
+}
+
+.map-icon-social {
+  width: 65px !important;
+  padding-top: 0px;
   padding-right: 20px
 }
 
