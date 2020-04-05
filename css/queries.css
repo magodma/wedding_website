@@ -292,7 +292,7 @@
 
 @media screen and (max-width: 640px) {
     .hero {
-        background: url('../img/hero.jpg') no-repeat center center;
+        background: url('../img/hero.png') no-repeat center center;
     }
     .hero .hero-content {
         padding-top: 100%;
@@ -338,7 +338,7 @@
 
 @media screen and (max-width: 480px) {
     .hero {
-        background: url('../img/hero.jpg') no-repeat center center;
+        background: url('../img/hero.png') no-repeat center center;
     }
 
     .love{
@@ -414,7 +414,7 @@
 @media screen and (max-width: 320px) {
 
     .hero {
-        background: url('../img/hero.jpg') no-repeat center center;
+        background: url('../img/hero.png') no-repeat center center;
     }
     .hero .hero-content {
         padding-top: 80%;
