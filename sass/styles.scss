@@ -242,7 +242,7 @@ Navigation
 
 .nav-toggle {
   position: absolute;
-  top: 0;
+  top: -18px;
   right: 15px;
   z-index: 999999;
   padding: 10px 35px 16px 0;
@@ -404,8 +404,8 @@ header {
 
   .logo img {
     height: 70px;
-    margin-bottom: -10px;
-    margin-top: -18px;
+    margin-bottom: -14px;
+    margin-top: -14px;
   }
 
   ul.primary-nav {
@@ -1195,7 +1195,7 @@ body.modal-open {
 
 
 .header_fixed {
-    padding: 35px 0px !important;
+    padding: 20px 0px !important;
 }
 
 .about-us-margin {
