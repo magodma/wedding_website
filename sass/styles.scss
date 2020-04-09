@@ -420,7 +420,7 @@ header {
         padding-right: 25px;
 
         &:hover {
-          color: $accent-color;
+          color: #a2d2ef;
         }
       }
 
@@ -438,7 +438,14 @@ header {
         color: $txt-light;
 
         &:hover {
-          color: $accent-color;
+          color: $white-color;
+	        border-color: $accent-color;
+	        background-color: $accent-color
+        }
+        &:focus {
+          color: $white-color;
+	        border-color: $accent-color;
+	        background-color: $accent-color
         }
       }
     }
@@ -451,7 +458,7 @@ header {
   .member-actions {
     position: absolute;
     right: 0;
-    top: 41px;
+    top: 26px;
     transition: all 300ms ease-in-out;
   }
 }
@@ -978,8 +985,15 @@ Google map
   padding-right: 20px
 }
 
+.map-icon-social-spotify {
+  width: 77px !important;
+  margin-top: -4px;
+  padding-top: 0px;
+  padding-right: 20px
+}
+
 .padding-top-social {
-  padding-top: 3%;
+  padding-top: 2.5%;
 }
 
 /* ==========================================================================
@@ -1200,4 +1214,8 @@ body.modal-open {
 
 .about-us-margin {
   margin-bottom: -20px;
+}
+
+.btn-background-white {
+  background-color: #a6b6ce5c;
 }

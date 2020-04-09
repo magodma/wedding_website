@@ -261,7 +261,7 @@
     }
 
     .events .rightcol {
-        padding: 0 20px;
+        padding: 0 14px;
     }
     
     #eng-pics .img-wrap {
@@ -297,6 +297,10 @@
     .hero .hero-content {
         padding-top: 100%;
     }
+
+    /* .btn-background-white {
+        background-color: #a6b6ce5c;
+    } */
 
     .love{
         height: 530px;
@@ -345,9 +349,6 @@
         height: 530px;
     }
 
-    .btn-background-white {
-        background-color: #d0ddef;
-    }
     .hero .hero-content {
         padding-top: 80%;
     }
@@ -424,9 +425,9 @@
         height: 445px;
     }
 
-    .btn-background-white {
-        background-color: #d0ddef;
-    }
+    /* .btn-background-white {
+        background-color: #a6b6ce5c;
+    } */
 
     .rsvp {
         padding-top: 20px;
